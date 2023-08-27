@@ -1,0 +1,108 @@
+SET OPERATORS
+	
+	# It is used to combine the result of two or more queries into a single result.
+	
+TYPES
+
+	1.UNION
+	2.UNION ALL
+	3.INTERSECT
+	4.MINUS
+	
+Rules:
+
+	# Each query will have 2 select statements that are seperated by set operator.
+	# Must have,
+		Same number of columns
+		Same datatype.
+	# If using Aggregate function,all select statements much have their own GROUP BY CLAUSE.
+	# All select statement must have a seperate FROM Clause.
+	# Should give alias name is first select statement.not second
+	# should give the Order by to Last Select statement.
+	# If use ALL keyword it will wont't remove duplicates.
+	
+	
+	
+1.UNION
+
+	# It returns only the unique/distinct result.
+	
+	# Output will be sorted by defalut(Without using order by).
+	
+	# Union is often slower than Union ALL. bcoz there is an operation to remove duplicates values,
+														which is often a costly step in a query.(cpu)
+														
+	# Not suitable for performance turning bcoz it removes duplicate records.
+	
+	#  SELECT QUERY1
+		UNION
+	   SELECT QUERY2
+	   
+UNION ALL
+
+	# It returns all the record from the query.
+	
+	# Output will not be sorted by default.
+	
+	# It will not remove the duplicate records.
+	
+	# suitable for performance turning bcoz it doe not removes duplicate records and sorting.
+	
+	# Union All is faster than Union.(bcoz does not remove duplicate value)
+	
+	# SELECT QUERY1,
+	  UNION ALL
+	  SELECT QUERY2;
+	  
+	  
+INTERSECT
+
+	# It returns all the common records from all the query.
+
+	# Output will be sorted by default.
+	
+	# Remove deplicate.
+	
+	# SELECT QUERY1,
+	  INTERSECT 
+	  SELECT QUERY2;
+	
+	
+	
+MINUS 
+
+	# It returns  all the records from one query result excluding the records from the other query result.
+	
+	# sorted by default.
+	
+	# remove duplicates.
+	
+	# SELECT QUERY1,
+	  minus
+	  SELECT QUERY2;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
